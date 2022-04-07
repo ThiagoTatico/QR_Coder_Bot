@@ -1,0 +1,24 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "QR code generator",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node deploy-commands",
+    "dev": "node ."
+  },
+  "keywords": [],
+  "author": "Thiago Tatico",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.31.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.12.0",
+    "typescript": "^4.6.3"
+  }
+}
