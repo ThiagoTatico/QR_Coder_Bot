@@ -2,6 +2,8 @@
 const fs = require('node:fs');
 const { Client, Collection, Intents } = require('discord.js');
 require('dotenv').config();
+const { DISCORD_TOKEN } = process.env;
+
 
 // Create a new client instance
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -31,7 +33,7 @@ for (const file of commandFiles) {
 }
 
 // Login to Discord with your client's token
-client.login(process.env.DISCORD_TOKEN);
+client.login(DISCORD_TOKEN);
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
