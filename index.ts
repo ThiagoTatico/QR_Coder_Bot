@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const { Client, Collection, Intents } = require('discord.js');
 require('dotenv').config();
+const deploy_commands = require("./deploy-commands")
 const { DISCORD_TOKEN } = process.env;
 
 
@@ -50,4 +51,9 @@ client.on('interactionCreate', async interaction => {
 		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}
 
+});
+
+client.on("guildCreate", guild => {
+	console.log("Joined a new guild: " + guild.name);
+	deploy_commands(guild.id)
 });
