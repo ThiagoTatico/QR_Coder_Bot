@@ -33,9 +33,6 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
-// Login to Discord with your client's token
-client.login(DISCORD_TOKEN);
-
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
@@ -55,5 +52,10 @@ client.on('interactionCreate', async interaction => {
 
 client.on("guildCreate", guild => {
 	console.log("Joined a new guild: " + guild.name);
-	deploy_commands(guild.id)
+	deploy_commands(guild.id);
 });
+
+// Login to Discord with your client's token
+client.login(DISCORD_TOKEN);
+
+exports.client = client;
