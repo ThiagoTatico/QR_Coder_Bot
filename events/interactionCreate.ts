@@ -1,5 +1,5 @@
 // When the client is ready, run this code (only once)
-const deploy = require("./deploy-commands")
+const deploy = require("../deploy-commands")
 
 module.exports = {
 	name: 'ready',
@@ -8,8 +8,6 @@ module.exports = {
 		console.log(`Ready! Logged in as ${client.user.tag}`);
 		const Guilds = client.guilds.cache.map(guild => guild.id);
 
-		for (const id of Guilds) {
-			deploy(id);
-		}
+		Guilds.forEach(id => deploy(id))
 	},
 };
