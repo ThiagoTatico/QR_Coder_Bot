@@ -1,1 +1,1 @@
-web: npm run start
+worker: npx ts-node index.ts
