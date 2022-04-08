@@ -4,13 +4,14 @@ This is an open source project from [DevProjects](http://www.codementor.io/proje
 Find the project requirements here: [Discord bot: QR code generator](https://www.codementor.io/projects/tool/discord-bot-qr-code-generator-cgkm8b16qf)
 
 ## Tech/framework used
-Built with ___
+Built with Node.js, TypeScript, Discord.js
 
 ## Screenshots and demo
-Screenshots of your app and/or a link to your live demo
+ADD in a server: encurtador.com.br/foI06
 
 ## Installation
-Instructions for other developers on how to install and run your code on their local environment.
+Install dependences: npm i <br>
+Run with: npm run start
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
