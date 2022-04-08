@@ -2,9 +2,9 @@
   "name": "discordbot",
   "version": "1.0.0",
   "description": "QR code generator",
-  "main": "index.js",
   "scripts": {
-    "deploy": "node deploy-commands",
+    "deploy": "npx ts-node deploy-commands",
+    "start": "npx ts-node .",
     "dev": "node ."
   },
   "keywords": [],
@@ -19,6 +19,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
-    "typescript": "^4.6.3"
+    "ts-node": "^10.7.0"
   }
 }

@@ -9,7 +9,7 @@ const { DISCORD_TOKEN } = process.env;
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
 // Call and execute the Event files
-const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
+const eventFiles: string[] = fs.readdirSync('./events').filter(file => file.endsWith('.ts'));
 
 for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
@@ -23,7 +23,7 @@ for (const file of eventFiles) {
 
 // Call and execute the Command files
 client.commands = new Collection();
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+const commandFiles: string[] = fs.readdirSync('./commands').filter(file => file.endsWith('.ts'));
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
