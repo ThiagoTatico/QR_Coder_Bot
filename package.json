@@ -1,6 +1,9 @@
 {
   "name": "discordbot",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.x"
+  },
   "description": "QR code generator",
   "scripts": {
     "deploy": "npx ts-node deploy-commands",
