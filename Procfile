@@ -1,1 +1,1 @@
-worker: npx ts-node-dev --respawn --transpile-only index.ts
+worker: npx ts-node index.ts
